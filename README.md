@@ -121,8 +121,7 @@ The website is fully responsive with breakpoints for:
 ## 📧 Contact
 
 - Email: awsclubmbu@gmail.com
-- Phone: +91 7842348377 (Rahul Kothuri)
-- Phone: +91 9502285901 (Deepika Sidda)
+
 
 ## 📄 License
 
