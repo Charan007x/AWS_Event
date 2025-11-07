@@ -1,0 +1,244 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  overflow: hidden;
+  padding: 80px 20px 40px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+}
+
+.aws-smile-logo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.smile-circle {
+  width: 180px;
+  height: 180px;
+  border: 4px solid rgba(255, 153, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  animation: pulse 2s ease-in-out infinite;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 0 30px rgba(255, 153, 0, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    border-color: rgba(255, 153, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 153, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    border-color: rgba(255, 153, 0, 0.6);
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.5);
+  }
+}
+
+.aws-animated {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.03em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff9900;
+  margin: 0 0 2rem 0;
+  text-shadow: 0 0 30px rgba(255, 153, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 1s ease-out 0.5s both, glow 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 30px rgba(255, 153, 0, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(255, 153, 0, 0.8), 0 0 80px rgba(255, 153, 0, 0.4);
+  }
+}
+
+.hero-organizer {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+.hero-date {
+  font-size: 1.1rem;
+  color: #ff9900;
+  font-weight: 600;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: 0.03em;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #ff9900 0%, #ff8000 100%);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
+  animation: fadeInUp 1s ease-out 1.1s both, float 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.register-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.register-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.register-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 153, 0, 0.6);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.register-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-organizer {
+    font-size: 1rem;
+  }
+  
+  .hero-date {
+    font-size: 0.95rem;
+  }
+  
+  .register-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  
+  .smile-circle {
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+  }
+  
+  .aws-animated {
+    width: 100%;
+    height: 100%;
+  }
+}
